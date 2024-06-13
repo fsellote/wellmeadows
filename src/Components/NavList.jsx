@@ -3,46 +3,132 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import DashboardIcon from '@mui/icons-material/Dashboard';
-import PeopleIcon from '@mui/icons-material/People';
-import BarChartIcon from '@mui/icons-material/BarChart';
 import SettingsIcon from '@mui/icons-material/Settings';
+import BookIcon from '@mui/icons-material/Book';
+import FeedIcon from '@mui/icons-material/Feed';
+import AccessibleForwardIcon from '@mui/icons-material/AccessibleForward';
+import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';
+import HotelIcon from '@mui/icons-material/Hotel';
+import MedicationIcon from '@mui/icons-material/Medication';
+import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
+import MedicalInformationIcon from '@mui/icons-material/MedicalInformation';
+import InfoIcon from '@mui/icons-material/Info';
+
 import { Link } from 'react-router-dom';
 
-const styles = {textDecoration: "none", color: "inherit"}
+const styles = {
+  textDecoration: "none",
+  color: "inherit"
+};
+
+const listItemButtonStyles = {
+  '&:hover': {
+    backgroundColor: '#800080', // Purple color
+    '& .MuiListItemIcon-root, & .MuiListItemText-primary': {
+      color: '#fff',
+    },
+  },
+};
 
 export const mainListItems = (
   <React.Fragment>
     <Link to="/dashboard" style={styles}>
-        <ListItemButton>
+      <ListItemButton sx={listItemButtonStyles}>
         <ListItemIcon>
-            <DashboardIcon />
+          <DashboardIcon />
         </ListItemIcon>
         <ListItemText primary="Dashboard" />
-        </ListItemButton>
+      </ListItemButton>
     </Link>
-    <Link to="/dashboard/users" style={styles}>
-        <ListItemButton>
+
+    <Link to="/dashboard/para sa book appointment" style={styles}>
+      <ListItemButton sx={listItemButtonStyles}>
         <ListItemIcon>
-            <PeopleIcon />
+          <BookIcon />
         </ListItemIcon>
-        <ListItemText primary="Users" />
-        </ListItemButton>
+        <ListItemText primary="Book Appointment" />
+      </ListItemButton>
     </Link>
-    <Link to="/dashboard/reports" style={styles}>
-        <ListItemButton>
+
+    <Link to="/dashboard/forms" style={styles}>
+      <ListItemButton sx={listItemButtonStyles}>
         <ListItemIcon>
-            <BarChartIcon />
+          <FormatListBulletedIcon />
         </ListItemIcon>
-        <ListItemText primary="Reports" />
-        </ListItemButton>
+        <ListItemText primary="Forms" />
+      </ListItemButton>
     </Link>
+
+    <Link to="/dashboard/patientinfo" style={styles}>
+      <ListItemButton sx={listItemButtonStyles}>
+        <ListItemIcon>
+          <FeedIcon />
+        </ListItemIcon>
+        <ListItemText primary="Patient Information" />
+      </ListItemButton>
+    </Link>
+
+    <Link to="/dashboard/patientlist" style={styles}>
+      <ListItemButton sx={listItemButtonStyles}>
+        <ListItemIcon>
+          <AccessibleForwardIcon />
+        </ListItemIcon>
+        <ListItemText primary="Patient Lists" />
+      </ListItemButton>
+    </Link>
+
+    <Link to="/dashboard/patient alloc" style={styles}>
+      <ListItemButton sx={listItemButtonStyles}>
+        <ListItemIcon>
+          <HotelIcon />
+        </ListItemIcon>
+        <ListItemText primary="Patient Allocation" />
+      </ListItemButton>
+    </Link>
+
+    <Link to="/dashboard/medication form" style={styles}>
+      <ListItemButton sx={listItemButtonStyles}>
+        <ListItemIcon>
+          <MedicalInformationIcon />
+        </ListItemIcon>
+        <ListItemText primary="Medication Form" />
+      </ListItemButton>
+    </Link>
+
+    <Link to="/dashboard/staff alloc" style={styles}>
+      <ListItemButton sx={listItemButtonStyles}>
+        <ListItemIcon>
+          <MedicationIcon />
+        </ListItemIcon>
+        <ListItemText primary="Staff Allocation" />
+      </ListItemButton>
+    </Link>
+
+    <Link to="/dashboard/stafflist" style={styles}>
+      <ListItemButton sx={listItemButtonStyles}>
+        <ListItemIcon>
+          <AssignmentIndIcon />
+        </ListItemIcon>
+        <ListItemText primary="Staff Lists" />
+      </ListItemButton>
+    </Link>
+
     <Link to="/dashboard/settings" style={styles}>
-        <ListItemButton>
+      <ListItemButton sx={listItemButtonStyles}>
         <ListItemIcon>
-            <SettingsIcon />
+          <SettingsIcon />
         </ListItemIcon>
         <ListItemText primary="Settings" />
-        </ListItemButton>
+      </ListItemButton>
+    </Link>
+
+    <Link to="/dashboard/about" style={styles}>
+      <ListItemButton sx={listItemButtonStyles}>
+        <ListItemIcon>
+          <InfoIcon />
+        </ListItemIcon>
+        <ListItemText primary="About" />
+      </ListItemButton>
     </Link>
   </React.Fragment>
 );
