@@ -19,7 +19,7 @@ import NotificationsIcon from '@mui/icons-material/Notifications';
 import LogoutIcon from '@mui/icons-material/Logout';
 import { mainListItems } from '../Components/NavList';
 import Copyright from '../Components/Copyright';
-import { Outlet, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 // Import MUI ImageList components
 import ImageList from '@mui/material/ImageList';
@@ -296,7 +296,6 @@ export default function Dashboard() {
                       {...legendPlacement}
                     />
                   </Stack>
-                  <Outlet />
                 </Paper>
               </Grid>
               <Grid item xs={12} md={4}>

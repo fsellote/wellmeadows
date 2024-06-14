@@ -3,16 +3,18 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import DashboardIcon from '@mui/icons-material/Dashboard';
-import SettingsIcon from '@mui/icons-material/Settings';
 import BookIcon from '@mui/icons-material/Book';
-import FeedIcon from '@mui/icons-material/Feed';
+import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
 import AccessibleForwardIcon from '@mui/icons-material/AccessibleForward';
 import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';
 import HotelIcon from '@mui/icons-material/Hotel';
 import MedicationIcon from '@mui/icons-material/Medication';
-import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
 import MedicalInformationIcon from '@mui/icons-material/MedicalInformation';
 import InfoIcon from '@mui/icons-material/Info';
+import SettingsIcon from '@mui/icons-material/Settings';
+import ListAltIcon from '@mui/icons-material/ListAlt';
+import NoteAddIcon from '@mui/icons-material/NoteAdd';
+
 
 import { Link } from 'react-router-dom';
 
@@ -41,7 +43,7 @@ export const mainListItems = (
       </ListItemButton>
     </Link>
 
-    <Link to="/dashboard/para sa book appointment" style={styles}>
+    <Link to="/dashboard/book-appointment" style={styles}>
       <ListItemButton sx={listItemButtonStyles}>
         <ListItemIcon>
           <BookIcon />
@@ -55,16 +57,7 @@ export const mainListItems = (
         <ListItemIcon>
           <FormatListBulletedIcon />
         </ListItemIcon>
-        <ListItemText primary="Forms" />
-      </ListItemButton>
-    </Link>
-
-    <Link to="/dashboard/patientinfo" style={styles}>
-      <ListItemButton sx={listItemButtonStyles}>
-        <ListItemIcon>
-          <FeedIcon />
-        </ListItemIcon>
-        <ListItemText primary="Patient Information" />
+        <ListItemText primary="Patient Registration" />
       </ListItemButton>
     </Link>
 
@@ -86,6 +79,15 @@ export const mainListItems = (
       </ListItemButton>
     </Link>
 
+    <Link to="/dashboard/local-doctors" style={styles}>
+      <ListItemButton sx={listItemButtonStyles}>
+        <ListItemIcon>
+          <NoteAddIcon />
+        </ListItemIcon>
+        <ListItemText primary="Local Doctors" />
+      </ListItemButton>
+    </Link>
+
     <Link to="/dashboard/medication form" style={styles}>
       <ListItemButton sx={listItemButtonStyles}>
         <ListItemIcon>
@@ -101,6 +103,15 @@ export const mainListItems = (
           <MedicationIcon />
         </ListItemIcon>
         <ListItemText primary="Staff Allocation" />
+      </ListItemButton>
+    </Link>
+
+    <Link to="/dashboard/staff alloc" style={styles}>
+      <ListItemButton sx={listItemButtonStyles}>
+        <ListItemIcon>
+          <ListAltIcon />
+        </ListItemIcon>
+        <ListItemText primary="Staff Form" />
       </ListItemButton>
     </Link>
 
