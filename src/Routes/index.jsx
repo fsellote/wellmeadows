@@ -5,6 +5,10 @@ import Dashboard from '../Page/Dashboard';
 import FormsPage from '../Page/FormsPage';
 import BookAppointmentPage from '../Page/BookAppointmentPage';
 import LocalDoctorsPage from '../Page/LocalDoctorsPage';
+import PatientRegistrationPage from '../Page/PatientRegistration';
+import StaffPage from '../Page/StaffForm';
+import PatientMedicationPage from '../Page/PatientMedicationForm';
+import RequisitionPage from '../Page/RequisitionForm';
 
 const routes = [
   {
@@ -30,6 +34,22 @@ const routes = [
   {
     path: "/dashboard/local-doctors",
     element: <LocalDoctorsPage />
+  },
+  {
+    path: "/patient-registration",
+    element: <PatientRegistrationPage />
+  },
+  {
+    path: "/staff-form",
+    element: <StaffPage />
+  },
+  {
+    path: "/patient-medication-form",
+    element: <PatientMedicationPage />
+  },
+  {
+    path: "/requisition-form",
+    element: <RequisitionPage />
   }
 ];
 

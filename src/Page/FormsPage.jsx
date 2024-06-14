@@ -19,7 +19,8 @@ import NotificationsIcon from '@mui/icons-material/Notifications';
 import LogoutIcon from '@mui/icons-material/Logout';
 import { mainListItems } from '../Components/NavList';
 import Copyright from '../Components/Copyright';
-import TextField from '@mui/material/TextField';
+import { Button } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 const drawerWidth = 240;
 
@@ -154,30 +155,38 @@ export default function FormsPage() {
         >
           <Toolbar />
           <Container maxWidth="lg" sx={{ mt: 10, mb: 20 }}>
-            <Grid container spacing={3}>
-              <Grid item xs={12}>
-                <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
-                  <Box
-                    sx={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      '& > :not(style)': { m: 1 },
-                    }}
-                  >
-                    <TextField
-                      helperText="Please enter your name"
-                      id="demo-helper-text-aligned"
-                      label="Name"
-                    />
-                    <TextField
-                      helperText=" "
-                      id="demo-helper-text-aligned-no-helper"
-                      label="Name"
-                    />
-                  </Box>
-                </Paper>
+            <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column', alignItems: 'center', width: 'fit-content', mx: 'auto' }}>
+              <Grid container spacing={3}>
+                <Grid item xs={6}>
+                  <Link to="/patient-registration" style={{ textDecoration: 'none', display: 'flex', justifyContent: 'center' }}>
+                    <Button variant='contained' sx={{ width: '100%' }}>
+                      Patient Registration Form
+                    </Button>
+                  </Link>
+                </Grid>
+                <Grid item xs={6}>
+                  <Link to="/staff-form" style={{ textDecoration: 'none', display: 'flex', justifyContent: 'center' }}>
+                    <Button variant='contained' sx={{ width: '100%' }}>
+                      Staff Form
+                    </Button>
+                  </Link>
+                </Grid>
+                <Grid item xs={6}>
+                  <Link to="/patient-medication-form" style={{ textDecoration: 'none', display: 'flex', justifyContent: 'center' }}>
+                    <Button variant='contained' sx={{ width: '100%' }}>
+                      Patient Medication Form
+                    </Button>
+                  </Link>
+                </Grid>
+                <Grid item xs={6}>
+                  <Link to="/requisition-form" style={{ textDecoration: 'none', display: 'flex', justifyContent: 'center' }}>
+                    <Button variant='contained' sx={{ width: '100%' }}>
+                      Requisition Form
+                    </Button>
+                  </Link>
+                </Grid>
               </Grid>
-            </Grid>
+            </Paper>
           </Container>
           <Copyright />
         </Box>
